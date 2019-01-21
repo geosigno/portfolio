@@ -1,0 +1,14 @@
+.bio {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__avatar {
+		img {
+			max-width: 360px;
+			border-radius: 50%;
+		}
+	}
+}
