@@ -1,4 +1,6 @@
 .bio {
+	max-width: 600px;
+	margin: 0 auto;
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -9,6 +11,20 @@
 		img {
 			max-width: 360px;
 			border-radius: 50%;
+		}
+	}
+	&__content {
+		p {
+			text-indent: 64px;
+		}
+	}
+	&__social {
+		display: flex;
+		li {
+			margin: 0 16px;
+		}
+		svg {
+			font-size: 32px;
 		}
 	}
 }

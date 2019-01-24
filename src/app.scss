@@ -1,29 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:300');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900|Montserrat:400,900');
 
 body {
-    color: #24292e;
+	color: #24292e;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Comfortaa';
-    text-align: center;
-    width: 100%;
+	display: inline-block;
+	font-family: 'Montserrat';
+	letter-spacing: 1px;
+	text-align: center;
+	position: relative;
 }
 
 h1 {
-    font-size: 62px;
+	font-size: 62px;
 }
 h2 {
-    font-size: 48px;
+	font-size: 56px;
+	&:after {
+		content: '';
+		position: absolute;
+		right: -32px;
+		bottom: 0;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: #48ca79;
+	}
 }
 h3 {
-    font-size: 32px;
+	font-size: 40px;
 }
 
 p {
-    font-family: 'Montserrat';
-    font-size: 18px;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 18px;
 }

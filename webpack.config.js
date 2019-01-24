@@ -6,26 +6,6 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 	filename: './index.html',
 });
 
-/*const webfontsGenerator = require('webfonts-generator');
-webfontsGenerator({
-    files: [
-         'src/icons/**.svg'
-      ],
-    dest: 'src/icon-font/',
-    fontName: 'icons',
-    html: true,
-    templateOptions: {
-      baseClass: 'icon',
-      classPrefix: 'icon-'
-    }
-}, function(error) {
-    if (error) {
-      console.log('Fail!', error);
-    } else {
-      console.log('Done!');
-  }
-}); */ 
-
 module.exports = {
 	entry: {
 		app: './src/app.js',
@@ -33,6 +13,7 @@ module.exports = {
 	output: {
 		path: path.resolve('dist'),
 		filename: '[name].bundle.js',
+		chunkFilename: '[name].bundle.js',
 	},
 	module: {
 		rules: [
@@ -60,7 +41,7 @@ module.exports = {
 						options: {
 							mozjpeg: {
 								progressive: true,
-								quality: 65
+								quality: 65,
 							},
 							// optipng.enabled: false will disable optipng
 							optipng: {
@@ -68,34 +49,34 @@ module.exports = {
 							},
 							pngquant: {
 								quality: '65-90',
-								speed: 4
+								speed: 4,
 							},
 							gifsicle: {
 								interlaced: false,
 							},
 							// the webp option will enable WEBP
 							webp: {
-								quality: 75
-							}
-						}
+								quality: 75,
+							},
+						},
 					},
 				],
 			},
 			{
 				test: /\.(ttf|eot|woff|woff2|svg)$/,
 				use: {
-				  loader: "file-loader",
-				  options: {
-					name: "fonts/[name].[ext]",
-				  },
+					loader: 'file-loader',
+					options: {
+						name: 'fonts/[name].[ext]',
+					},
 				},
-			  },
+			},
 		],
 	},
-	   optimization: {
-		     splitChunks: {
-		       chunks: 'all'
-		     }
-		   },
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+		},
+	},
 	plugins: [htmlWebpackPlugin],
 };
