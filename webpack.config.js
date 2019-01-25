@@ -17,6 +17,14 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			// {
+			// 	test: /\.(jpe?g|png)$/i,
+			// 	loader: 'responsive-loader',
+			// 	options: {
+			// 		adapter: require('responsive-loader/sharp'),
+			// 		quality: 100,
+			// 	}
+			// },
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,

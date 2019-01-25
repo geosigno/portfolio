@@ -1,61 +1,54 @@
 .portfolio {
 	&__list {
 		display: flex;
+		flex-direction: column;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	&__item {
-		flex: calc(100% / 3);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 64px;
-		transform: scale(1);
-		transition: all 0.4s;
-		will-change: background;
-		will-change: transform;
+		padding: 128px 32px;
+		&-container {
+			display: flex;
+			.reversed & {
+				flex-direction: row-reverse;
+			}
+		}
 		&:nth-child(1) {
-			background: rgba(0, 0, 0, 0.05);
+			background: rgba(0, 0, 0, 0.01);
 		}
 		&:nth-child(2) {
-			background: rgba(0, 0, 0, 0.1);
+			background: rgba(0, 0, 0, 0.03);
 		}
 		&:nth-child(3) {
-			background: rgba(0, 0, 0, 0.15);
+			background: rgba(0, 0, 0, 0.06);
 		}
-		img {
-			max-width: 300px;
-			margin: 0 0 32px;
-			filter: grayscale(100%);
-			transition: filter 0.4s;
-			will-change: filter;
-		}
-		h3 {
-			font-size: 24px;
-			opacity: 0;
-			margin: 0;
-			transition: opacity 0.4s;
-		}
+	}
+	&__content {
+		flex: 50%;
+		position: relative;
+		margin: 0 32px;
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: -128px;
+		width: 100%;
+		overflow: hidden;
+		transition: all .4s;
 		&:hover {
-			cursor: pointer;
-			transform: scale(1.1);
-			&:nth-child(1) {
-				background: rgba(#a8d1e7, 0.5);
-			}
-			&:nth-child(2) {
-				background: rgba(#b3dbda, 0.5);
-			}
-			&:nth-child(3) {
-				background: rgba(#fee5e0, 0.5);
-			}
-			img {
-				filter: grayscale(0);
-			}
-			h3 {
-				opacity: 1;
-			}
+			top: -384px;
+		}	
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 600px;
+			max-width: 100%;
+			box-shadow: 6px 6px 15px -4px rgba(0,0,0, 0.1), -6px 6px 8px -4px rgba(0,0,0, 0.1)
 		}
+	}
+	&__title {
+		text-align: left;
 	}
 }

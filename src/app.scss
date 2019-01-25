@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,900|Montserrat:400,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900|Montserrat:400,600,900');
 
 body {
 	color: #24292e;
@@ -19,6 +19,7 @@ h1 {
 }
 h2 {
 	font-size: 56px;
+	margin: 0 0 56px;
 	&:after {
 		content: '';
 		position: absolute;
@@ -32,10 +33,46 @@ h2 {
 }
 h3 {
 	font-size: 40px;
+	margin: 0 0 40px;
 }
 
 p {
 	font-family: 'Montserrat';
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 20px;
+	margin: 0 0 32px;
+}
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1600px) {
+	max-width: 1400px;
+}
+
+@media screen and (max-width: 1400px) {
+	max-width: 1200px;
+}
+
+@media screen and (max-width: 1200px) {
+	max-width: 1000px;
+}
+
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 600;
+	font-family: 'Montserrat';
+	color: #fff;
+	border-radius: 32px;
+	text-decoration: none;
+	padding: 16px 32px;
+	background: #48ca79;
+	transition: all .2s;
+	&:hover {
+		background: #d51a20;
+	}
 }
