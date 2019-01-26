@@ -18,19 +18,25 @@ h1 {
 	font-size: 62px;
 }
 h2 {
+	display: block;
 	font-size: 56px;
-	margin: 0 0 56px;
-	&:after {
-		content: '';
-		position: absolute;
-		right: -32px;
-		bottom: 0;
-		width: 24px;
-		height: 24px;
-		border-radius: 50%;
-		background: #48ca79;
+	text-align: center;
+	margin: 0 auto 64px;
+	span {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			right: -32px;
+			bottom: 0;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background: #48ca79;
+		}
 	}
 }
+
 h3 {
 	font-size: 40px;
 	margin: 0 0 40px;
@@ -40,8 +46,14 @@ p {
 	font-family: 'Montserrat';
 	font-weight: 400;
 	font-size: 20px;
+	line-height: 1.5;
 	margin: 0 0 32px;
 }
+
+.block {
+	margin-bottom: 128px;
+}
+
 
 .container {
 	max-width: 1600px;

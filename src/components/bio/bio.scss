@@ -1,6 +1,7 @@
 .bio {
-	max-width: 600px;
-	margin: 0 auto;
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -9,22 +10,35 @@
 	}
 	&__avatar {
 		img {
-			max-width: 360px;
+			max-width: 320px;
 			border-radius: 50%;
-		}
-	}
-	&__content {
-		p {
-			text-indent: 64px;
+			margin: 0 0 64px;
 		}
 	}
 	&__social {
 		display: flex;
+		list-style-type: none;
+		margin: 32px 0 0;
+		padding: 0;
 		li {
-			margin: 0 16px;
+			margin: 0 8px;
+		}
+		a {
+			opacity: .7;
+			padding: 16px;
+			transition: opacity .2s;
+			will-change: opacity;
+			&:hover {
+				opacity: 1;
+				svg {
+					transform: scale(1.2);
+				}
+			}
 		}
 		svg {
 			font-size: 32px;
+			transform: scale(1);
+			transition: transform .2s;
 		}
 	}
 }

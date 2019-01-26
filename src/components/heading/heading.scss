@@ -1,0 +1,17 @@
+.heading {
+	display: block;
+	margin: 0 0 64px;
+	span {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			right: -32px;
+			bottom: 0;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background: #48ca79;
+		}
+	}
+}

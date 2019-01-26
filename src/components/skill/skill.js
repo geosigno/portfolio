@@ -5,6 +5,8 @@ import Slider from 'react-slick';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { Heading } from '../heading/heading';
+
 import './skill.scss';
 
 export class Skill extends React.Component {
@@ -105,7 +107,7 @@ export class Skill extends React.Component {
 
 		return (
 			<div className="skill__container">
-				<h2>I do know</h2>
+				<Heading title={ "I do know" } />
 				<Slider {...settings}>{renderSkills}</Slider>
 			</div>
 		);

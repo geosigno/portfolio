@@ -15,13 +15,13 @@
 			}
 		}
 		&:nth-child(1) {
-			background: rgba(0, 0, 0, 0.01);
+			background: rgba(#92a8d1, .2);
 		}
 		&:nth-child(2) {
-			background: rgba(0, 0, 0, 0.03);
+			background: rgba(#8cbbb2, .2);
 		}
 		&:nth-child(3) {
-			background: rgba(0, 0, 0, 0.06);
+			background: rgba(#aa8f61, .2);
 		}
 	}
 	&__content {
@@ -31,14 +31,15 @@
 	}
 	&__image {
 		position: absolute;
-		top: 0;
+		
 		left: 0;
 		bottom: -128px;
 		width: 100%;
 		overflow: hidden;
 		transition: all .4s;
+		max-height: calc(100% + 128px);
 		&:hover {
-			top: -384px;
+			max-height: calc(100% + 128px + 256px);
 		}	
 		img {
 			display: block;

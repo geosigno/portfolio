@@ -10,6 +10,8 @@ import simpleParallaxThumbnail from './simpleParallaxContent.png';
 
 import './portfolio.scss';
 
+import { Heading } from '../heading/heading';
+
 //const responsiveImage = require('./simpleParallaxcontent.png?sizes[]=600,sizes[]=1200,sizes[]=1920,quality=100');
 
 export class Portfolio extends React.Component {
@@ -80,7 +82,7 @@ export class Portfolio extends React.Component {
 		}
 		return (
 			<div className="portfolio__container">
-				<h2>Some project I did</h2>
+				<Heading title={ "Some project I did" } />
 				<ul className="portfolio__list">{projects}</ul>
 			</div>
 		);
