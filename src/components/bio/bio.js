@@ -18,7 +18,7 @@ export class Bio extends React.Component {
 				linkedin: {
 					icon: 'linkedin-in',
 					color: '#0077b5',
-					link: '#',
+					link: 'https://www.linkedin.com/in/geoffrey-signorato-2475268a',
 				},
 				twitter: {
 					icon: 'twitter',
@@ -28,7 +28,7 @@ export class Bio extends React.Component {
 				medium: {
 					icon: 'medium',
 					color: '#000',
-					link: '#',
+					link: 'https://medium.com/@geoffrey.signorato',
 				},
 			},
 		};
@@ -43,7 +43,7 @@ export class Bio extends React.Component {
 
 			let listItem = (
 				<li key={key}>
-					<a href={link}>
+					<a href={link} target='_blank'>
 						<FontAwesomeIcon color={color} icon={['fab', icon]} />
 					</a>
 				</li>
