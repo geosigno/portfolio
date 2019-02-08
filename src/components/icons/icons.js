@@ -15,7 +15,7 @@ import {
 	faStackOverflow,
 	faTwitter,
 	faLinkedinIn,
-	faMedium
+	faMedium,
 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
@@ -33,5 +33,5 @@ library.add(
 	faStackOverflow,
 	faTwitter,
 	faLinkedinIn,
-	faMedium
+	faMedium,
 );

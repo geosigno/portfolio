@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Slider from 'react-slick';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Heading } from '../heading/heading';
@@ -96,19 +94,21 @@ export class Skill extends React.Component {
 				text = this.state.skills[key].text;
 
 			let skill = (
-				<div key={key} className="skill__item">
+				<li key={key} className="skill__item">
 					<FontAwesomeIcon color={color} icon={['fab', icon]} />
 					<h3 style={{ color: color }}>{title}</h3>
 					<p>{text}</p>
-				</div>
+				</li>
 			);
 			renderSkills.push(skill);
 		}
 
 		return (
 			<div className="skill__container">
-				<Heading title={ "I do know" } />
-				<Slider {...settings}>{renderSkills}</Slider>
+				<Heading title={'I do know'} />
+				<ul className="skill__slider">{renderSkills}</ul>
+
+				{/* <Slider {...settings}>{renderSkills}</Slider> */}
 			</div>
 		);
 	}

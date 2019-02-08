@@ -7,12 +7,26 @@ import Header from './components/header/header';
 import Bio from './components/bio/bio';
 import Portfolio from './components/portfolio/portfolio';
 import Skill from './components/skill/skill';
+import Contact from './components/contact/contact';
 
 import simpleParallax from 'simple-parallax-js';
 
-var image = document.querySelectorAll('#portfolio img');
-new simpleParallax(image, {
-    orientation: 'down',
-    scale: 1.3,
-	overflow: true
+var image1 = document.querySelectorAll('#portfolio img')[0],
+	image2 = document.querySelectorAll('#portfolio img')[1],
+	image3 = document.querySelectorAll('#portfolio img')[2];
+
+new simpleParallax(image1, {
+	orientation: 'left',
+	scale: 1.3,
+	overflow: true,
+});
+new simpleParallax(image2, {
+	orientation: 'right',
+	scale: 1.3,
+	overflow: true,
+});
+new simpleParallax(image3, {
+	orientation: 'left',
+	scale: 1.3,
+	overflow: true,
 });

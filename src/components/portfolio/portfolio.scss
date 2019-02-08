@@ -7,9 +7,15 @@
 		padding: 0;
 	}
 	&__item {
-		padding: 128px 32px;
+		display: flex;
+		align-items: center;
+		min-height: 100vh;
+		position: relative;
+		overflow: hidden;
 		&-container {
 			display: flex;
+			height: 100%;
+			padding: 32px;
 			.reversed & {
 				flex-direction: row-reverse;
 			}
@@ -26,27 +32,48 @@
 	}
 	&__content {
 		flex: 50%;
-		position: relative;
-		margin: 0 32px;
 	}
 	&__image {
 		position: absolute;
+		top: 0;
 		left: 0;
-		bottom: -128px;
-		width: 100%;
-		overflow: hidden;
-		transition: all .4s;
-		max-height: calc(100% + 256px);
-		&:hover {
-			max-height: calc(100% + 128px + 256px);
-		}	
+		transform: translateY(256px);
+		width: 50vw;
+		transition: transform .2s;
+		will-change: transform;
+		&.hover {
+			transform: translateY(64px);
+		}
+		.reversed & {
+			left: inherit;
+			right: 0;
+		}
 		img {
 			display: block;
+			width: 100%;
+			max-width: 600px;
 			margin: 0 auto;
-			width: 600px;
-			max-width: 100%;
 			box-shadow: 6px 6px 15px -4px rgba(0,0,0, 0.1), -6px 6px 8px -4px rgba(0,0,0, 0.1)
 		}
+		
+		// position: absolute;
+		// left: 50%;
+		// bottom: -64px;
+		// transform: translateX(-50%);
+		// width: 150%;
+		// overflow: hidden;
+		// transition: all .4s;
+		// max-height: calc(100% + 64px);
+		// &.hover {
+		// 	max-height: calc(100% + 64px + 248px);
+		// }
+		// img {
+		// 	display: block;
+		// 	margin: 0 auto;
+		// 	width: 600px;
+		// 	max-width: 100%;
+		// 	
+		// }
 	}
 	&__title {
 		text-align: left;
