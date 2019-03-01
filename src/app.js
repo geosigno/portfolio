@@ -4,10 +4,12 @@ import './app.scss';
 import './components/icons/icons';
 
 import Header from './components/header/header';
+import Contact from './components/contact/contact';
 import Bio from './components/bio/bio';
 import Portfolio from './components/portfolio/portfolio';
 import Skill from './components/skill/skill';
-import Contact from './components/contact/contact';
+import Navigation from './components/navigation/navigation';
+import Form from './components/form/form';
 
 import simpleParallax from 'simple-parallax-js';
 

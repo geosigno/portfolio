@@ -71,7 +71,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(ttf|eot|woff|woff2|svg)$/,
+				test: /\.(ttf|eot|woff|woff2)$/,
 				use: {
 					loader: 'file-loader',
 					options: {
@@ -79,6 +79,8 @@ module.exports = {
 					},
 				},
 			},
+			{ test: /\.svg$/, loader: 'svg-loader' }
+			
 		],
 	},
 	optimization: {

@@ -12,7 +12,7 @@ export class Contact extends React.Component {
 	}
 	render() {
 		return (
-			<div className="contact__container">
+			<div className="contact__container container container--small">
 				<Heading title={'Contact me'} />
 				<Geo />
 			</div>

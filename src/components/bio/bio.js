@@ -57,7 +57,7 @@ export class Bio extends React.Component {
 		}
 
 		return (
-			<div className="bio__container">
+			<div className="bio__container container container--small">
 				<div className="bio__avatar">
 					<img src={this.state.avatar} />
 				</div>

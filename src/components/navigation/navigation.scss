@@ -1,0 +1,38 @@
+nav {
+	position: fixed;
+	transform: translateX(-50%);
+	top: 50%;
+	left: 32px;
+	z-index: 11;
+	ul {
+		display: flex;
+		list-style-type: none;
+		transform: rotate(-90deg);
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		position: relative;
+		padding: 16px 32px;
+		&.active {
+			font-weight: 900;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background: rgba(#d51a20, 0.8);
+				z-index: -1;
+			}
+		}
+	}
+	a {
+		font-size: 18px;
+		color: inherit;
+		text-decoration: none;
+	}
+}
