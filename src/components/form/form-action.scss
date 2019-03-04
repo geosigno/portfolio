@@ -1,0 +1,27 @@
+.form__next,
+.form__previous,
+.form__step {
+    position: absolute;
+}
+
+.form__next {
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    color: #48ca79;
+}
+
+.form__previous,
+.form__step {
+    font-size: 14px;
+    color: grey;
+    padding-top: 8px;
+}
+
+.form__previous {
+    color: grey;
+}
+
+.form__step {
+    right: 0;
+}

@@ -1,15 +1,14 @@
-.shape {
+.shape li svg{
 	color: #fff;
-	font-size: 256px;
+	font-size: 200px;
 	opacity: 0;
 	transform: scale(0.5);
 	position: absolute;
 	z-index: 1;
 	filter: blur(16px);
-	transition: opacity 2s, transform 2s, top 2s, left 2s, filter 1s;
+	transition: opacity 2s, transform 2s, filter 1s;
 	will-change: opacity;
 	will-change: transform;
-	will-change: position;
 	will-change: filter;
 	&.active {
 		opacity: 0.4;

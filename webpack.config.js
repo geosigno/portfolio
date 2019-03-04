@@ -79,8 +79,7 @@ module.exports = {
 					},
 				},
 			},
-			{ test: /\.svg$/, loader: 'svg-loader' }
-			
+			{ test: /\.svg$/, loader: 'svg-inline-loader' },
 		],
 	},
 	optimization: {

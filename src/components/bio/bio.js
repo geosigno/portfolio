@@ -4,66 +4,26 @@ import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Heading } from '../heading/heading';
+import { Social } from '../social/social';
 
 import avatar from './bio.jpg';
+
 import './bio.scss';
 
 export class Bio extends React.Component {
 	constructor() {
 		super();
-		this.state = {
-			avatar: avatar,
-			name: 'Geoffrey',
-			socials: {
-				linkedin: {
-					icon: 'linkedin-in',
-					color: '#0077b5',
-					link: 'https://www.linkedin.com/in/geoffrey-signorato-2475268a',
-				},
-				twitter: {
-					icon: 'twitter',
-					color: '#38A1F3',
-					link: '#',
-				},
-				medium: {
-					icon: 'medium',
-					color: '#000',
-					link: 'https://medium.com/@geoffrey.signorato',
-				},
-				github: {
-					icon: 'github-alt',
-					color: '#000',
-					link: 'https://github.com/geosenna',
-				},
-			},
-		};
 	}
 
 	render() {
-		const socialList = [];
-		for (const key in this.state.socials) {
-			let icon = this.state.socials[key].icon,
-				link = this.state.socials[key].link,
-				color = this.state.socials[key].color;
-
-			let listItem = (
-				<li key={key}>
-					<a href={link} target="_blank">
-						<FontAwesomeIcon color={color} icon={['fab', icon]} />
-					</a>
-				</li>
-			);
-			socialList.push(listItem);
-		}
-
 		return (
 			<div className="bio__container container container--small">
 				<div className="bio__avatar">
-					<img src={this.state.avatar} />
+					<img src={avatar} alt="Geoffrey Signorato" />
 				</div>
 
 				<div className="bio__content">
-					<Heading title={"Hello, I'm " + this.state.name} />
+					<Heading title={"Hello, I'm Geoffrey"} />
 					<p>
 						I’m 27, it has been more than 10 years that I have a fondness for web. I
 						learnt it on my own, travelling countless tutorials and the amazing at the
@@ -94,8 +54,7 @@ export class Bio extends React.Component {
 						Ocean in Mauritius Island.
 					</p>
 				</div>
-
-				<ul className="bio__social">{socialList}</ul>
+				<Social />
 			</div>
 		);
 	}

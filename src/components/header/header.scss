@@ -27,33 +27,6 @@
 		background-size: 200% 200%;
 		animation: Gradient 10s ease-in-out infinite;
 	}
-
-	&__title {
-		display: block;
-		font-size: 56px;
-		line-height: 1.1;
-		position: inherit;
-		margin: 0;
-		span {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			z-index: 1;
-			&:first-child {
-				right: 55%;
-			}
-			&:last-child {
-				left: 45%;
-				font-size: 80px;
-				letter-spacing: 6px;
-				text-transform: uppercase;
-				color: #fff;
-				background: #d51a20;
-				padding: 8px 24px;
-				margin-left: 32px;
-			}
-		}
-	}
 }
 
 @keyframes Gradient {

@@ -17,8 +17,12 @@ export class Geo extends React.Component {
 		this.mauritiusLongitude = 57.6755;
 		this.userLatitude = null;
 		this.userLongitude = null;
-		this.handleClick = this.handleClick.bind(this);
+		// this.handleClick = this.handleClick.bind(this);
 		this.getCoordonateSuccess = this.getCoordonateSuccess.bind(this);
+	}
+
+	componentDidMount() {
+		this.getCoordonate();
 	}
 
 	getCoordonate() {
@@ -80,30 +84,25 @@ export class Geo extends React.Component {
 		});
 	}
 
-	handleClick(e) {
-		e.preventDefault();
-		this.getCoordonate();
-	}
+	// handleClick(e) {
+	// 	e.preventDefault();
+	// 	this.getCoordonate();
+	// }
 
 	render() {
-		let response = '';
-		if (this.state.distance) {
-			response = (
-				<div>
-					<p>You are {this.state.distance} from me...</p>
-					<p>Hmmm why don't send a mail?</p>
-				</div>
-			);
-		}
-
 		return (
 			<div>
-				<p>I am currenlty living into Mauritius Island!</p>
-				<p>Wanna check how far you are from me right now?</p>
+				<p>I am currenlty living into Mauritius Island.</p>
+				{/* <p>Wanna check how far you are from me right now?</p>
 				<a href="#" className="btn" onClick={this.handleClick}>
 					yes, why not?
-				</a>
-				{response}
+				</a> */}
+				<div>
+					<p>
+						You are {this.state.distance} from me... Hmmm why don't you send me a
+						message?
+					</p>
+				</div>
 			</div>
 		);
 	}

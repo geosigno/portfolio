@@ -9,7 +9,6 @@ import Bio from './components/bio/bio';
 import Portfolio from './components/portfolio/portfolio';
 import Skill from './components/skill/skill';
 import Navigation from './components/navigation/navigation';
-import Form from './components/form/form';
 
 import simpleParallax from 'simple-parallax-js';
 

@@ -12,27 +12,4 @@
 			margin: 0 0 64px;
 		}
 	}
-	&__social {
-		display: flex;
-		list-style-type: none;
-		margin: 32px 0 0;
-		padding: 0;
-		a {
-			opacity: 0.7;
-			padding: 16px;
-			transition: opacity 0.2s;
-			will-change: opacity;
-			&:hover {
-				opacity: 1;
-				svg {
-					transform: scale(1.2);
-				}
-			}
-		}
-		svg {
-			font-size: 32px;
-			transform: scale(1);
-			transition: transform 0.2s;
-		}
-	}
 }

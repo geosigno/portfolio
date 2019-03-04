@@ -18,6 +18,8 @@ import {
 	faMedium,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 library.add(
 	faHtml5,
 	faSass,
@@ -34,4 +36,5 @@ library.add(
 	faTwitter,
 	faLinkedinIn,
 	faMedium,
+	faArrowRight,
 );
